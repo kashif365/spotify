@@ -10,33 +10,36 @@
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="logo">
                 <i class="fa-brands fa-spotify"></i>
                 <span>Spotify</span>
             </div>
             
             <nav class="nav-menu">
-                <a href="#" class="nav-item active">
+                <a href="#" class="nav-item active" data-view="home" id="nav-home">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-item" data-view="search" id="nav-search">
                     <i class="fas fa-search"></i>
                     <span>Search</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-item" data-view="library" id="nav-library">
                     <i class="fas fa-book"></i>
                     <span>Your Library</span>
                 </a>
             </nav>
 
             <div class="nav-menu create-section">
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-item" data-view="create" id="nav-create">
                     <i class="fas fa-plus-square"></i>
                     <span>Create Playlist</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-item" data-view="likes" id="nav-likes">
                     <i class="fas fa-heart"></i>
                     <span>Liked Songs</span>
                 </a>
@@ -54,19 +57,50 @@
         <main class="main-content">
             <header class="top-bar">
                 <div class="navigation-arrows">
-                    <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button> -->
                 </div>
                 <div class="user-actions">
                     <button class="btn-upgrade">Upgrade</button>
-                    <button class="btn-user">
+                    <button class="btn-user" id="profile-btn">
                         <i class="fas fa-user-circle"></i>
                         <span>Profile</span>
+                        <i class="fas fa-chevron-down profile-arrow"></i>
                     </button>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="profile-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="profile-info">
+                                <div class="profile-name">Music Lover</div>
+                                <div class="profile-email">user@spotify.com</div>
+                            </div>
+                        </div>
+                        <div class="profile-divider"></div>
+                        <a href="#" class="profile-item">
+                            <i class="fas fa-user"></i>
+                            <span>Account</span>
+                        </a>
+                        <a href="#" class="profile-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#" class="profile-item">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </a>
+                        <div class="profile-divider"></div>
+                        <a href="#" class="profile-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log out</span>
+                        </a>
+                    </div>
                 </div>
             </header>
 
-            <section class="content">
+            <section class="content" id="home-view">
                 <h2 class="section-title">Good Evening</h2>
                 <div class="featured-playlists">
                     <div class="featured-item" data-song="0">
@@ -134,7 +168,183 @@
                         <button class="card-play-btn"><i class="fas fa-play"></i></button>
                     </div>
                 </div>
+
+                <h2 class="section-title">Trending Songs</h2>
+                <div class="cards-container">
+                    <div class="card" data-song="5">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Latin Rhythm</h3>
+                        <p>Bad Bunny</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Blinding Lights</h3>
+                        <p>The Weeknd</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="1">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>One Dance</h3>
+                        <p>Drake ft. Wizkid</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="2">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Shape of You</h3>
+                        <p>Ed Sheeran</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="3">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Do I Wanna Know?</h3>
+                        <p>Arctic Monkeys</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Popular Artists</h2>
+                <div class="slider-container">
+                    <button class="slider-arrow slider-prev" id="artists-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="artists-slider" id="artists-slider">
+                        <div class="artists-container">
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="The Weeknd">
+                                <h3>The Weeknd</h3>
+                                <p>150M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="The Weeknd">
+                                <h3>The Weeknd</h3>
+                                <p>150M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Drake">
+                                <h3>Drake</h3>
+                                <p>120M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Ed Sheeran">
+                                <h3>Ed Sheeran</h3>
+                                <p>100M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Arctic Monkeys">
+                                <h3>Arctic Monkeys</h3>
+                                <p>45M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Billie Eilish">
+                                <h3>Billie Eilish</h3>
+                                <p>95M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                            <div class="artist-card">
+                                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Bad Bunny">
+                                <h3>Bad Bunny</h3>
+                                <p>140M followers</p>
+                                <button class="artist-follow-btn"><i class="fas fa-play"></i> PLAY</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow slider-next" id="artists-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <h2 class="section-title">New Releases</h2>
+                <div class="cards-container">
+                    <div class="card" data-song="0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Infinity Echoes</h3>
+                        <p>The Weeknd, 2024</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="1">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Urban Nights</h3>
+                        <p>Drake, 2024</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="2">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Divide & Conquer</h3>
+                        <p>Ed Sheeran, 2024</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="3">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Neon Dreams</h3>
+                        <p>Arctic Monkeys, 2024</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="4">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Sunset Boulevard</h3>
+                        <p>Billie Eilish, 2024</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
             </section>
+
+            <!-- Search View -->
+            <section class="content" id="search-view" style="display: none;">
+                <h2 class="section-title">Search</h2>
+                <div class="search-content">
+                    <div class="search-input-large">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-content-input" placeholder="Search songs, artists, playlists...">
+                    </div>
+                    <p class="search-hint">Right-click on any song to add it to a playlist</p>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </section>
+
+            <!-- Your Library View -->
+            <section class="content" id="library-view" style="display: none;">
+                <h2 class="section-title">Your Library</h2>
+                <div class="library-content">
+                    <div class="library-section">
+                        <h3>Playlists</h3>
+                        <div class="library-playlists" id="library-playlists"></div>
+                    </div>
+                    <div class="library-section">
+                        <h3>Recent Songs</h3>
+                        <div class="library-recent" id="library-recent"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Create Playlist View -->
+            <section class="content" id="create-view" style="display: none;">
+                <h2 class="section-title">Create New Playlist</h2>
+                <div class="create-playlist-form">
+                    <div class="form-group">
+                        <label for="playlist-name">Playlist Name</label>
+                        <input type="text" id="playlist-name" placeholder="Enter playlist name...">
+                    </div>
+                    <div class="form-group">
+                        <label for="playlist-desc">Description</label>
+                        <textarea id="playlist-desc" placeholder="Add an optional description..."></textarea>
+                    </div>
+                    <button class="btn-create-playlist">Create Playlist</button>
+                    <div id="playlist-created-msg" style="display: none; margin-top: 16px; color: #1db954;">✓ Playlist created successfully!</div>
+                </div>
+            </section>
+
+            <!-- Liked Songs View -->
+            <section class="content" id="likes-view" style="display: none;">
+                <h2 class="section-title">Liked Songs</h2>
+                <div class="liked-songs-list" id="liked-songs-list">
+                    <p class="empty-state">No liked songs yet. Like songs while playing to add them here!</p>
+                </div>
+            </section>
+
+            <!-- Default Home View Content -->
+            <section class="content" id="home-view-content">
         </main>
     </div>
 
@@ -151,29 +361,30 @@
 
         <div class="player-center">
             <div class="player-controls">
-                <button class="control-btn"><i class="fas fa-random"></i></button>
-                <button class="control-btn"><i class="fas fa-step-backward"></i></button>
-                <button class="control-btn play-pause" id="play-pause-btn">
+                <button class="control-btn" id="shuffle-btn" title="Shuffle"><i class="fas fa-random"></i></button>
+                <button class="control-btn" id="prev-btn" title="Previous"><i class="fas fa-step-backward"></i></button>
+                <button class="control-btn play-pause" id="play-pause-btn" title="Play/Pause">
                     <i class="fas fa-play"></i>
                 </button>
-                <button class="control-btn"><i class="fas fa-step-forward"></i></button>
-                <button class="control-btn"><i class="fas fa-redo"></i></button>
+                <button class="control-btn" id="next-btn" title="Next"><i class="fas fa-step-forward"></i></button>
+                <button class="control-btn" id="repeat-btn" title="Repeat"><i class="fas fa-redo"></i></button>
             </div>
             <div class="progress-bar">
                 <span class="current-time" id="current-time">0:00</span>
                 <div class="bar">
                     <div class="bar-progress" id="progress"></div>
                     <div class="bar-handle" id="progress-handle"></div>
+                    <div class="bar-tooltip" id="bar-tooltip">0:00</div>
                 </div>
                 <span class="total-time" id="total-time">0:00</span>
             </div>
         </div>
 
         <div class="player-right">
-            <button class="control-btn"><i class="fas fa-list"></i></button>
-            <button class="control-btn"><i class="fas fa-desktop"></i></button>
+            <button class="control-btn" id="queue-btn" title="Queue"><i class="fas fa-list"></i></button>
+            <button class="control-btn" id="fullscreen-btn" title="Full Screen"><i class="fas fa-expand"></i></button>
             <div class="volume-control">
-                <button class="control-btn"><i class="fas fa-volume-up"></i></button>
+                <button class="control-btn" id="mute-btn" title="Mute"><i class="fas fa-volume-up"></i></button>
                 <div class="volume-bar">
                     <div class="volume-progress" id="volume-progress"></div>
                 </div>
