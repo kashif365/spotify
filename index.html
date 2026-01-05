@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>Your Library</span>
+                </a>
+            </nav>
+
+            <div class="nav-menu create-section">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Playlist</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Liked Songs</span>
+                </a>
+            </div>
+
+            <div class="playlist-section">
+                <div class="playlist-item">My Playlist #1</div>
+                <div class="playlist-item">Chill Vibes</div>
+                <div class="playlist-item">Workout Mix</div>
+                <div class="playlist-item">Study Session</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="navigation-arrows">
+                    <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-actions">
+                    <button class="btn-upgrade">Upgrade</button>
+                    <button class="btn-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="content">
+                <h2 class="section-title">Good Evening</h2>
+                <div class="featured-playlists">
+                    <div class="featured-item" data-song="0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>Today's Top Hits</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="featured-item" data-song="1">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>RapCaviar</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="featured-item" data-song="2">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>All Out 2020s</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="featured-item" data-song="3">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>Rock Classics</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="featured-item" data-song="4">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>Chill Hits</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="featured-item" data-song="5">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Playlist Cover">
+                        <span>Viva Latino</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Your Top Mixes</h2>
+                <div class="cards-container">
+                    <div class="card" data-song="0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Daily Mix 1</h3>
+                        <p>The Weeknd, Dua Lipa, and more</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="1">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Daily Mix 2</h3>
+                        <p>Drake, Post Malone, and more</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="2">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Daily Mix 3</h3>
+                        <p>Ed Sheeran, Taylor Swift, and more</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="3">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Daily Mix 4</h3>
+                        <p>Arctic Monkeys, The Strokes, and more</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="card" data-song="4">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Album Cover">
+                        <h3>Daily Mix 5</h3>
+                        <p>Billie Eilish, Lorde, and more</p>
+                        <button class="card-play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Music Player -->
+    <footer class="music-player">
+        <div class="player-left">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=60&h=60&fit=crop" alt="Album Art" id="player-img">
+            <div class="song-info">
+                <div class="song-name" id="song-name">Select a song</div>
+                <div class="artist-name" id="artist-name">Artist</div>
+            </div>
+            <button class="like-btn"><i class="far fa-heart"></i></button>
+        </div>
+
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="control-btn"><i class="fas fa-random"></i></button>
+                <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="control-btn play-pause" id="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                <button class="control-btn"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar">
+                <span class="current-time" id="current-time">0:00</span>
+                <div class="bar">
+                    <div class="bar-progress" id="progress"></div>
+                    <div class="bar-handle" id="progress-handle"></div>
+                </div>
+                <span class="total-time" id="total-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <button class="control-btn"><i class="fas fa-list"></i></button>
+            <button class="control-btn"><i class="fas fa-desktop"></i></button>
+            <div class="volume-control">
+                <button class="control-btn"><i class="fas fa-volume-up"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-progress" id="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="audio-player"></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>
